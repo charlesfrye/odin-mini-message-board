@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1>Welcome to the <%= title %></h1>
+    <div id="messages">
+      <% messages.forEach(function(message) { %>
+      <div class="message">
+        <p><strong><%= message.user %></strong>: <%= message.text %></p>
+        <p><small><%= message.added.toDateString() %></small></p>
+      </div>
+      <% }); %>
+    </div>
+    <button onclick="location.href='/new'" id="newMessage">New Message</button>
+  </body>
+</html>

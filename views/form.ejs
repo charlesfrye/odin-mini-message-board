@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <div id="postMessageForm">
+      <h2>Post a message!</h2>
+      <form method="POST" action="/new">
+        <p>
+          <label for="user">User</label>
+          <input type="text" name="user" id="user" />
+        </p>
+        <p>
+          <label for="message">Message</label>
+          <input type="text" name="message" id="message" />
+        </p>
+        <p>
+          <input type="submit" value="Post Message" />
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
